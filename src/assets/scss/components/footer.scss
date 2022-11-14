@@ -1,0 +1,96 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: url(../../assets/img/overview_background.svg) 85% 60%/120px auto no-repeat, url(../../assets/img/overview_background.svg) 60% 50%/40px auto no-repeat, $gradient-background-inverted;
+    text-align: center;
+    
+    &__text {
+        padding-bottom: $wrapper-padding;
+    }
+    // & > :not(:last-child) {
+    //     padding-bottom: $wrapper-padding; 
+    // }
+
+    & > :last-child {
+        display: inline-block;
+        padding-bottom: calc(2 * #{$wrapper-padding});
+    }
+
+    & > :first-child {
+        padding-top: $wrapper-padding;
+    }
+    &__menu {
+        width: 100%;
+        padding-bottom: 0;
+
+        & > :not(:last-child) {
+            padding-bottom: calc(2 * #{$wrapper-padding});
+        }
+
+        .logo {
+            &__image {
+                height: 72px;
+            }
+
+            padding-bottom: $wrapper-padding;
+        }
+
+        & > &__empty {
+            width: 0;
+            height: 0;
+            padding: 0;
+            padding-bottom: 0;
+        }
+    }
+
+    .menu {
+        padding-left: $wrapper-padding;
+        text-align: left;
+
+        &__element {
+            &:not(:last-child) {
+                padding-bottom: 9px;
+            }
+        }
+    }
+
+    @include for-tablet-landscape-up  {
+        padding: 0 $wrapper-padding-desktop;
+        background: url(../../assets/img/overview_background.svg) 105% 50%/250px auto no-repeat, url(../../assets/img/overview_background.svg) 90% 20%/100px auto no-repeat, $gradient-background-inverted;
+
+        &__menu {
+            display: flex;
+            width: 100%;
+            flex-direction: row-reverse;
+            align-items: center;
+            justify-content: space-between;
+
+            & > &__empty {
+                width: 218px;
+                height: 76px;
+
+            }
+
+            .menu {
+                flex-grow: 0.25;
+                padding: $wrapper-padding 0;
+
+                &__container {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: space-around;
+                }
+
+                &__element {
+                    &:not(:last-child) {
+                        padding-bottom: 0;
+                    }
+                }
+            }
+
+        }
+    }
+
+}

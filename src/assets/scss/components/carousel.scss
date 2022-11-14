@@ -1,0 +1,93 @@
+.carousel {
+    width: 100vw;
+    height: auto;
+    padding: $wrapper-padding 0 !important;
+    background: linear-gradient(180deg, rgba(255,255,255,0) 7%, rgba(204,203,203,0.5) 60%, rgba(255,255,255,0) 100%);
+    
+    .carousel__card{
+        width: 218px;
+        height: 250px;
+        padding: 28px 12px;
+        background-color: white;
+        border-radius: 7px;
+        text-align: center;        
+        
+        &.swiper-slide-active {
+            box-shadow: inset 0 -7px 0 -1px $primary;
+        }
+
+        &:first-child {
+            margin-left: 11px;
+        }
+        
+        &__figure {
+            &__image {
+                width: 150px;
+                height: auto;
+                padding-bottom: 15px;
+            }
+        }
+        
+    }
+
+    & .swiper-pagination-bullet-active {
+        background: $primary;
+    }
+
+    @include for-tablet-landscape-up {
+
+        & .swiper-wrapper {
+            justify-content: center;
+        }
+        .carousel__card {
+            max-width: 250px;
+            height: auto;
+            padding: 60px 26px;
+
+            &.swiper-slide-active {
+                box-shadow: none;
+            }
+
+            &:first-child {
+                margin-left: 0;
+            }
+        
+            &:last-child {
+                margin-right: 0 !important;
+            }
+
+            &__text {
+                & :first-child {
+                    padding-top: 25px;
+                    padding-bottom: 13px;
+                }
+            }
+        }
+
+    }
+
+    @include for-desktop-up {
+        width: 100%;
+        background: none;
+
+        
+        .carousel__card {
+            max-width: 310px;
+            box-shadow: 0 0 45px -18px;
+
+
+            &.swiper-slide-active {
+                box-shadow: 0 0 45px -18px;
+            }
+
+            &__figure {
+                &__image {
+                    width: 200px;
+                    height: auto;
+                    padding-bottom: 15px;
+                }
+            }
+
+        }
+    }
+}

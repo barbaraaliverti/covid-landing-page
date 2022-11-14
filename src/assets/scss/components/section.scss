@@ -1,0 +1,156 @@
+.section {
+    display: flex;
+    flex-direction: column;
+    padding: $wrapper-padding;
+
+    &:not(:last-child) {
+        padding-bottom: calc(#{$wrapper-padding} / 2);
+    }
+
+    &:not(:first-child) {
+        padding-top: calc(#{$wrapper-padding} / 2);
+    }
+
+    
+    &__figure {
+        padding-top: $wrapper-padding;
+        margin-left: -7vw;
+        text-align: center;
+        
+        &__image {
+            width: 100%;
+            max-width: 400px;
+        }
+    }
+
+    &#home {
+        background: url(../../assets/img/home_background.svg) 99% 3% / 70px auto no-repeat,
+            url(../../assets/img/home_background.svg) -8% 25% / 60px auto no-repeat,
+            url(../../assets/img/home_background.svg) 90% 40% / 30px auto no-repeat,
+            url(../../assets/img/home_background.svg) -1% 60% / 30px auto no-repeat,
+            $gradient-background;
+    }
+
+    &#overview {
+        background: url(../../assets/img/overview_background.svg) 115% 10%/120px auto no-repeat, url(../../assets/img/overview_background.svg) -12% 80% /75px auto no-repeat;
+        
+        .section {
+            &__figure {
+                margin-left: 0;
+            }
+        }
+    }
+    
+    &#contagion {
+        padding-right: 0;
+        padding-left: 0;
+        background: url(../../assets/img/overview_background.svg) 95% 100%/132px auto no-repeat;
+        
+        & > .section__text {
+            padding-right: $wrapper-padding;
+            padding-left: $wrapper-padding;
+        }
+    }    
+    
+    &#symptoms {
+        
+        .section__figure {
+            margin-left: -50px;
+            
+            &__image {
+                width: 116%;
+                max-width: 400px;
+            }
+        }
+    }
+
+    &#prevention {
+        background: url(../../assets/img/prevention_background_red.svg) 122% 32%/150px auto no-repeat, 
+            url(../../assets/img/prevention_background_green.svg) -25% 78%/120px auto no-repeat, 
+            url(../../assets/img/prevention_background_green_transparent.svg) 99% 100%/70px auto no-repeat;
+    }
+
+    @include for-tablet-landscape-up {
+        
+        &__text {
+            width: 45%;
+            align-self: center;
+        }
+        
+        &__figure {
+            width: 45%;
+            padding-top: 0;
+            
+            &__image {
+                max-width: 800px;
+                margin-right: -4rem;
+            }
+        }
+        
+        &#home {
+            flex-direction: row;
+            justify-content: space-between;            
+            padding: 0 $wrapper-padding-desktop calc(#{$wrapper-padding-desktop} / 2) $wrapper-padding-desktop;
+            background: none;
+        }
+        
+        &#overview {
+            flex-direction: row-reverse;
+            justify-content: space-between;            
+            padding: 0 $wrapper-padding-desktop calc(#{$wrapper-padding-desktop} / 2) $wrapper-padding-desktop;
+            background: url(../../assets/img/overview_background.svg) 107% 75%/200px auto no-repeat, url(../../assets/img/overview_background.svg) 95% 95% /90px auto no-repeat;
+        }
+        
+        &#contagion {
+            padding: 0 $wrapper-padding-desktop calc(#{$wrapper-padding-desktop} / 2) $wrapper-padding-desktop;
+            padding-right: 0;
+            padding-left: 0;
+            background: url(../../assets/img/overview_background.svg) 15% 77%/220px auto no-repeat;
+            text-align: center;
+
+            & > .section__text {
+                width: 60%;
+                padding-bottom: 50px;               
+            }
+        }
+
+        &#symptoms {
+            align-items: center;
+            padding: 0 $wrapper-padding-desktop calc(#{$wrapper-padding-desktop} / 2) $wrapper-padding-desktop;
+            text-align: center;
+
+            .section {
+                &__text {
+                    width: 60%;
+                    padding-bottom: 50px;
+                }
+    
+                &__figure {
+                    width: 100%;
+                    margin: 0;
+                    
+                    &__image {
+                        width: 100%;
+                        max-width: 1100px;
+                        margin: auto;
+                    }
+                }
+            }
+        }
+
+        &#prevention {
+            padding: 0 $wrapper-padding-desktop calc(#{$wrapper-padding-desktop} / 2) $wrapper-padding-desktop;
+            background: url(../../assets/img/prevention_background_red.svg) 108% 90%/250px auto no-repeat, 
+            url(../../assets/img/prevention_background_green.svg) -7% 28%/230px auto no-repeat, 
+            url(../../assets/img/prevention_background_green_transparent.svg) 99% 80%/100px auto no-repeat;
+            text-align: center;
+
+            & > .section__text {
+                width: 60%;
+                padding-bottom: 50px;               
+            }
+        }
+    }
+}
+
+

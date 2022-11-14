@@ -1,0 +1,98 @@
+button {
+    padding: 1rem 2.5rem;
+    border: solid 1px transparent;
+    border-radius: 46px;
+    color: $primary;
+    cursor: pointer;
+    font-family: 'proxima', Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 600;
+    transition: background-color 400ms;
+    
+    &.button--primary {
+        background-color: $primary;
+        color: white;
+        font-size: 16px;
+        
+        &:hover {
+            background-color: $primary-hover;
+        }
+    
+        &:disabled {
+            background-color: $light-gray;
+            cursor: not-allowed;
+        }
+    }
+
+    &.button--secondary {
+        background-color: $primary-light;
+        box-shadow: 0 3px 2px lightgray;
+        font-size: 16px;
+
+        &:hover {
+            background-color: $primary;
+            box-shadow: none;
+            color: white;
+        }
+    
+        &:disabled {
+            background-color: $dark-gray;
+            color: $light-gray;
+            cursor: not-allowed;
+        }
+    }
+
+    &.button--tertiary {
+        border: 2px solid $primary;
+        background-color: transparent;
+        font-size: 16px;
+        font-weight: 400;
+
+        &:hover {
+            background-color: $primary-light;
+            color: $primary;
+        }
+    
+        &:disabled {
+            background-color: transparent;
+            border-color: $dark-gray;
+            color: $dark-gray;
+            cursor: not-allowed;
+        }
+    }
+
+    &.button--submit {
+        width: 34px;
+        height: 34px;
+        padding: 0;
+        background-color: $primary;
+        color: white;
+
+        &:disabled {
+            background-color: $dark-gray;
+            color: black;
+            opacity: 40%;
+        }
+    }
+
+}
+
+@include for-tablet-landscape-up {
+    button {
+        &.button--primary {
+            font-size: 24px;
+        }
+
+        &.button--secondary {
+            font-size: 20px;
+        }
+
+        &.button--tertiary {
+            font-size: 18px;
+        }
+
+        &.button--submit {
+            padding: 22px 70px;
+        }
+
+    }
+}

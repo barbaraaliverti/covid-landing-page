@@ -1,0 +1,48 @@
+{
+  "name": "covid-19-landing-page-vanilla",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npm run clean && parcel src/index.html -p 3000 -d development",
+    "build": "rimraf ./dist && parcel build src/index.html --out-dir dist --public-url ./",
+    "clean": "rimraf ./.cache",
+    "lint:es": "eslint --ignore-path .gitignore \"**/*.js\"",
+    "lint:style": "stylelint \"src/**/*.scss\"",
+    "lint:fix": "stylelint \"src/**/*.scss\" --fix",
+    "lint": "npm run lint:es && npm run lint:style",
+    "format": "prettier --ignore-path .gitignore --write \"**/*.{js,json,scss,md}\"",
+    "precommit": "npm run lint"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "autoprefixer": "^8.4.1",
+    "babel-preset-env": "^1.6.1",
+    "jquery": "^3.3.1",
+    "jquery-validation": "^1.19.5",
+    "node-sass": "^4.9.0",
+    "parcel-bundler": "^1.8.1",
+    "postcss-preset-env": "^4.1.0",
+    "prettier": "^1.12.1",
+    "swip": "^0.1.0",
+    "swipe": "^1.7.7",
+    "swiper": "^8.1.4"
+  },
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-import": "^2.11.0",
+    "eslint-plugin-prettier": "^2.6.0",
+    "husky": "^0.13.4",
+    "rimraf": "^3.0.2",
+    "sass": "^1.26.3",
+    "stylelint": "^9.10.1",
+    "stylelint-config-idiomatic-order": "^5.0.0",
+    "stylelint-config-prettier": "^3.2.0",
+    "stylelint-config-recommended-scss": "^3.2.0",
+    "stylelint-scss": "^3.1.0"
+  }
+}

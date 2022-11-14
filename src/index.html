@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Covid Landing Page Vanilla</title>
+  <link rel="icon" type="image/x-icon" href="./assets/img/favicon.ico">
+  <link rel="stylesheet" href="./assets/scss/main.scss" />
+  <script src="https://kit.fontawesome.com/518534edfd.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div>
+    <header class="header">
+      <div class="header__container">
+        <div class="logo">
+          <img class="logo__image" src="./assets/img/logo.svg" alt="Covid-19 landing page logo"></img>
+        </div>
+        <button class="menu__icon" href="javascript:void(0)">
+          <i class="fa-solid fa-bars"></i>        
+        </button>
+      </div>
+      <nav class="menu">      
+        <ul class="menu__elements">
+          <li class="menu__element"><a class="menu__link" href="#overview">Overview</a></li>
+          <li class="menu__element"><a class="menu__link" href="#contagion">Contagion</a></li>
+          <li class="menu__element"><a class="menu__link" href="#symptoms">Symptoms</a></li>
+          <li class="menu__element"><a class="menu__link" href="#prevention">Prevention</a></li>
+          <li class="menu__element"><button class="button button--tertiary" type="button"><a class="menu__element__button" href="#contact">Contact</a></button></li>
+        </ul>
+      </nav>
+    </header>
+  
+    <main class="main">
+      <section class="section" id="home">
+        <div class="section__text">
+          <span class="pre-headline">COVID-19 Alert</span>
+          <h2>Stay at Home Quarantine To Stop Corona Virus</h2>
+          <p>There is no specific medicine to prevent or treat coronavirus disease (COVID-19). People may need supportive care to .</p>
+          <button class="button button--primary">Let Us Help</button>
+        </div>      
+        <figure class="section__figure">
+          <img class="section__figure__image" src="./assets/img/person-at-home.svg"></img>
+          <figcaption></figcaption>
+        </figure>
+      </section>
+      
+      <section class="section" id="overview">
+        <div class="section__text">
+          <span class="pre-headline">What Is Covid-19</span>
+          <h2>Coronavirus</h2>
+          <p>Corona viruses are a type of virus. There are many different kinds, and some cause disease. A newly identified type has caused a recent outbreak of respiratory illness now called COVID-19.Lauren Sauer, M.S., the director of operations with the Johns Hopkins Office of Critical Event Preparedness and Response</p>
+          <button  class="button button--secondary">Learn More</button>
+        </div>
+        <figure class="section__figure">
+          <img class="section__figure__image" src="./assets/img/what-is-covid.svg"></img>
+          <figcaption></figcaption>
+        </figure>
+      </section>
+      
+      <section class="section" id="contagion">
+        <div class="section__text">
+          <span class="pre-headline">Covid-19</span>
+          <h2>Contagion</h2>
+          <p>Corona viruses are a type of virus. There are many different kinds, and some cause disease. A newly identified type</p>
+        </div>
+        <div class="swiper carousel">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide carousel__card">               
+              <figure class="carousel__card__figure">
+                <img class="carousel__card__figure__image" src="./assets/img/air-transmission.svg"></img>
+                <figcaption></figcaption>
+              </figure>
+              <div class="carousel__card__text">
+                <h4>Air Transmission</h4>
+                <small>Objectively evolve tactical expertise before extensible initiatives. Efficiently simpdivfy</small>
+              </div>    
+            </div>
+            <div class="swiper-slide carousel__card">
+              <figure class="carousel__card__figure">
+                <img class="carousel__card__figure__image" src="./assets/img/human-contacs.svg"></img>
+                <figcaption></figcaption>
+              </figure>
+              <div class="carousel__card__text">
+                <h4>Human Contacts</h4>
+                <small>Washing your hands is one of the simplest ways you can protect</small>
+              </div>
+            </div>
+            <div class="swiper-slide carousel__card">
+              <figure class="carousel__card__figure">
+                <img class="carousel__card__figure__image" src="./assets/img/objects.svg"></img>
+                <figcaption></figcaption>
+              </figure>
+              <div class="carousel__card__text">
+                <h4>Contained Objects</h4>
+                <small>Use the tissue while sneezing. In this way, you can protect your droplets.</small>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </section>
+      
+      <section class="section" id="symptoms">
+        <div class="section__text">
+          <span class="pre-headline">Covid-19</span>
+          <h2>Symptoms</h2>
+          <p>Corona viruses are a type of virus. There are many different kinds, and some cause disease. A newly identified type has caused a recent outbreak of respiratory </p>
+        </div>
+        <figure class="section__figure">
+          <img class="section__figure__image" src="./assets/img/symptoms.svg"></img>
+          <figcaption></figcaption>
+        </figure>
+      </section>
+    
+      <section class="section" id="prevention">
+        <div class="section__text">
+          <span class="pre-headline">Covid-19</span>
+          <h2>What should we do</h2>
+          <p>Corona viruses are a type of virus. There are many different kinds, and some cause disease. A newly identified type has caused</p>
+        </div>
+        
+        <ol class="image-text-list">
+          <li class="image-text-list__container">
+              <figure class="image-text-list__figure">
+                <img class="image-text-list__figure__image" src="./assets/img/mask.svg"></img>
+                <figcaption></figcaption>
+              </figure>
+              <div class="image-text-list__text">
+                <h3>Wear masks</h3>
+                <p>Continually seize impactful vortals rather than future-proof supply chains. Uniquely exploit emerging niches via fully tested meta-services. Competently pursue standards compliant leadership skills vis-a-vis pandemic "outside the box" thinking. Objectively </p>
+              </div>
+          </li>
+          <li class="image-text-list__container">
+              <figure class="image-text-list__figure">
+                <img class="image-text-list__figure__image" src="./assets/img/wash-hands.svg"></img>
+                <figcaption></figcaption>
+              </figure>
+              <div class="image-text-list__text">
+                <h3>Wash Your Hands</h3>
+                <p>Continually seize impactful vortals rather than future-proof supply chains. Uniquely exploit emerging niches via fully tested meta-services. Competently pursue standards compliant leadership skills vis-a-vis pandemic "outside the box" thinking. Objectively Continually seize impactful vortals</p>
+              </div>
+          </li>
+          <li class="image-text-list__container">
+              <figure class="image-text-list__figure">
+                <img class="image-text-list__figure__image" src="./assets/img/nose-rag.svg"></img>
+                <figcaption></figcaption>
+              </figure>
+              <div class="image-text-list__text">
+                <h3>Use nose-rag</h3>
+                <p>Continually seize impactful vortals rather than future-proof supply chains. Uniquely exploit emerging niches via fully tested meta-services. Competently pursue standards compliant leadership skills vis-a-vis pandemic "outside the box" thinking. Objectively </p>
+              </div>
+          </li>
+          <li class="image-text-list__container">
+              <figure class="image-text-list__figure">
+                <img class="image-text-list__figure__image" src="./assets/img/avoid-contact.svg"></img>
+                <figcaption></figcaption>
+              </figure>
+              <div class="image-text-list__text">
+                <h3>Avoid contacts</h3>
+                <p>Continually seize impactful vortals rather than future-proof supply chains. Uniquely exploit emerging niches via fully tested meta-services. Competently pursue standards compliant leadership skills vis-a-vis pandemic</p>
+              </div>
+          </li>        
+        </ol>
+      </section>    
+    </main>
+    
+    <footer class="footer">
+      <h2 class="footer__text">Have a Question in mind? <br>Let us help you</h2>
+      <form class="form" id="contact">
+        <div class="form__input">
+          <label></label>
+          <input class="form__input__field" placeholder="snmonydemo@gmail.com" type="email" name="email" required></input>        
+          <button class="form__input__button button--submit" type="submit"></button>
+        </div>
+        <span class="form__input__message"></span>
+      </form>
+      <div class="footer__menu">
+        <div class="footer__menu__empty"></div>
+        <nav class="menu">
+          <ul class="menu__container">
+            <li class="menu__element"><a class="menu__link" href="#overview">Overview</a></li>
+            <li class="menu__element"><a class="menu__link" href="#contagion">Contagion</a></li>
+            <li class="menu__element"><a class="menu__link" href="#symptoms">Symptoms</a></li>
+            <li class="menu__element"><a class="menu__link" href="#prevention">Prevention</a></li>
+          </ul>
+        </nav>
+        <div class="logo">
+          <img class="logo__image" src="./assets/img/logo.svg" alt="Covid-19 landing page logo"></img>
+        </div>
+      </div>    
+      <small class="footer__copyright">2020 @ All rights reserved by pixelspark.co</small>
+    </footer>
+  </div>
+  
+  <script src="./assets/js/app.js"></script>  
+</body>
+</html>

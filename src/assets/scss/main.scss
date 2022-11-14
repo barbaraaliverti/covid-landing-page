@@ -1,0 +1,34 @@
+// WRAPPER PADDING
+$wrapper-padding: 54px;
+$wrapper-padding-desktop: 10vw;
+
+// RESET
+@import './global/reset.scss';
+
+// GLOBAL
+@import './global/color.scss';
+@import './global/mixins.scss';
+@import './global/fonts.scss';
+@import './global/text-style.scss';
+@import './global/buttons.scss';
+
+// COMPONENTS
+@import './components/logo.scss';
+@import './components/header.scss';
+@import './components/main.scss';
+@import './components/section.scss';
+@import './components/image-text-list.scss';
+@import './components/carousel.scss';
+@import './components/footer.scss';
+@import './components/form.scss';
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  display: inline-block;
+  color: $tertiary;
+  font-family: 'proxima', Verdana, Geneva, Tahoma, sans-serif;
+  word-wrap: normal;
+}

@@ -1,0 +1,15 @@
+$error: #f00;
+$main-color: #ccc;
+
+$primary: #fb4c47;
+$primary-light: #fee6e4;
+$primary-hover: #C63F3B;  
+$secondary: #035755;
+$tertiary: #4b4f51;
+$background: #fef8f8;
+
+$dark-gray: #999;
+$light-gray: #d6d6d6;
+
+$gradient-background: linear-gradient($background, white);
+$gradient-background-inverted: linear-gradient( white, $background);

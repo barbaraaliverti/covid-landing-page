@@ -1,0 +1,11 @@
+.logo {
+    &__image {
+        height: 40px;
+    }
+
+    @include for-tablet-landscape-up {
+        &__image {
+            height: 60px;
+        }    
+    }
+}

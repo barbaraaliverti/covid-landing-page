@@ -1,0 +1,136 @@
+.header {
+  position: sticky;
+  z-index: 10;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  background: $background;
+  
+  &__container {
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 16px;
+    box-shadow: 0 0 10px lightgrey;
+    
+  }
+
+  .menu {
+    display: none;
+    height: 0;
+    background-image: $gradient-background;
+    transition: height 500ms;
+    
+    &--open {
+      display: block;
+      height: calc(100vh - 56px);
+    }    
+    
+    &__elements {
+      margin: 45px;
+    }
+    
+    &__element {
+      margin: 2rem 0;
+
+      &__button {
+        margin: 1rem 0;
+        color: $primary;
+      }
+    }
+    
+    &__link {      
+      padding: 13px 0;
+      cursor: pointer;
+      font-size: 1.4em;      
+    }    
+      
+    &__icon {
+      padding: 8px 12px;
+      background-color: transparent;
+      color: $secondary;
+      font-size: 20px;
+    }
+  
+    &__icon--close {
+      color: $primary;
+    }
+
+    &__link:active, &__link:hover {
+      position: relative;
+      color: $primary;      
+      &::before {
+        position: absolute;
+        bottom: calc(50% - 3px);
+        left: -15px;
+        width: 6px;
+        height: 6px;
+        background-color: $primary;
+        border-radius: 100%;
+        content: '';
+      }
+    }
+  }
+
+  @include for-tablet-landscape-up {
+    position: static;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 $wrapper-padding-desktop;
+    background: none;
+    background-image: none;
+
+    &__container {
+      padding: 0;
+      box-shadow: none;
+    }
+    
+
+    .logo {
+      padding: 5px 0;      
+    }
+
+    .menu {      
+      display: block;
+      height: auto;
+      background: none;
+
+      &__elements {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0; 
+      }
+
+      &__element {
+        &:not(:last-child) {
+          margin: 0 30px 0 0;
+        }
+
+        &__button {
+          margin: 0;          
+        }
+      }
+
+      &__link {
+        padding: 19px 0;
+        font-size: 1.2em;
+      }
+
+      &__link--active, &__link:hover {
+        position: relative;
+        &::before {
+          bottom: 0;
+          left: 50%;
+          content: '';
+        }
+      }
+
+      &__icon {
+        display: none;
+      }
+    }
+    
+  }
+}
